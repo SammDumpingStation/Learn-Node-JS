@@ -1,25 +1,30 @@
 const http = require("http");
 const fileSystem = require("fs");
 
-const server = http.createServer((request, result) => {
+const server = http.createServer((request, response) => {
   let htmlFile = "./HTML-CSS-Practice/";
-  result.setHeader("Content-Type", "text/html/css");
+  response.setHeader("Content-Type", "text/html/css");
 
   switch (request.url) {
     case "/":
       htmlFile += "01-text-styles.html";
+      response.statusCode = 200;
       break;
     case "/amazon":
       htmlFile += "02-amazon-button-practice.html";
+      response.statusCode = 200;
       break;
     case "/company":
       htmlFile += "03-buttons-of-company-practice.html";
+      response.statusCode = 200;
       break;
     case "/padding":
       htmlFile += "04-padding-margin-practice.html";
+      response.statusCode = 200;
       break;
     default:
       htmlFile += "05-404.html";
+      response.statusCode = 400;
       break;
   }
 
@@ -27,7 +32,7 @@ const server = http.createServer((request, result) => {
     if (error) {
       console.log(error);
     } else {
-      result.end(data);
+      response.end(data);
     }
   });
 });

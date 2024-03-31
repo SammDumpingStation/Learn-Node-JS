@@ -3,7 +3,7 @@ const fileSystem = require("fs");
 
 const server = http.createServer((request, response) => {
   let htmlFile = "./HTML-CSS-Practice/";
-  response.setHeader("Content-Type", "text/html/css");
+  response.setHeader("Content-Type", "text/html");
 
   switch (request.url) {
     case "/":
@@ -24,7 +24,7 @@ const server = http.createServer((request, response) => {
       break;
     default:
       htmlFile += "05-404.html";
-      response.statusCode = 400;
+      response.statusCode = 404;
       break;
   }
 

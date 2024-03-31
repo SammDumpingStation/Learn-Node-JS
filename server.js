@@ -1,8 +1,13 @@
 const http = require("http");
 const fileSystem = require("fs");
+const _ = require('lodash');
 
 const server = http.createServer((request, response) => {
   let htmlFile = "./HTML-CSS-Practice/";
+  
+  const randomNumber = _.random(0, 20);
+  console.log(randomNumber);
+    
   response.setHeader("Content-Type", "text/html");
 
   switch (request.url) {

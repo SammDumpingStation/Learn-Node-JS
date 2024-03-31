@@ -1,0 +1,51 @@
+  p {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .first {
+    padding: 10px;
+  }
+
+  .stretch {
+    background-color: #027500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    margin-top: 10px;
+    transition: padding 0.5s;
+  }
+
+  .stretch:hover {
+    padding: 20px 40px;
+  }
+
+.shadow {
+    background-color: #027500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+  margin: 10px 0px 0px 10px;
+    transition: margin 0.15s; /* Apply transition to both bottom and right margins */
+    cursor: pointer;
+}
+
+.shadow:active {
+  margin: 7px 3px 3px 7px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.number {
+    background-color: #027500;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    border: none;
+    margin: 10px;
+    transition: padding 0.15s, margin 0.15s;
+}
+
+.number:hover {
+  padding: 5px 15px;
+  margin: 10px 5px;
+}

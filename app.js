@@ -3,11 +3,15 @@ const express = require("express");
 // express app
 const app = express();
 
+app.set("view engine", "ejs");
+
 //listen for request
 app.listen(3000);
 
 app.get("/", (request, response) => {
-  response.sendFile('./HTML-CSS-Practice/01-text-styles.html', { root: __dirname})
+  response.sendFile("./HTML-CSS-Practice/01-text-styles.html", {
+    root: __dirname,
+  });
 });
 
 app.get("/amazon", (request, response) => {
@@ -16,6 +20,8 @@ app.get("/amazon", (request, response) => {
   });
 });
 
-app.get('/company', (request, response) => {
-  response.sendFile('./HTML-CSS-Practice/03-buttons-of-company-practice.html', {root: __dirname});
-})
+app.get("/company", (request, response) => {
+  response.sendFile("./HTML-CSS-Practice/03-buttons-of-company-practice.html", {
+    root: __dirname,
+  });
+});
